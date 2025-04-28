@@ -16,9 +16,14 @@ class AllExpensenHeader extends StatelessWidget {
         Container(
           padding: const EdgeInsets.all(12),
           decoration: ShapeDecoration(
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(12),
-                  side: const BorderSide(width: 1, color: Color(0xffF1F1F1)))),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(12),
+              side: const BorderSide(
+                width: 1,
+                color: Color(0xffF1F1F1),
+              ),
+            ),
+          ),
           child: const Row(
             children: [
               Text(

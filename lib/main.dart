@@ -11,6 +11,7 @@ class ResponsiveDashBoardApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: const DashBoardView(),
       theme: ThemeData(fontFamily: "Montserrat"),
     );
