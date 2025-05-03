@@ -43,22 +43,6 @@ class _AllExpensenItemsListViewState extends State<AllExpensenItemsListView> {
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 12),
                 child: GestureDetector(
-                    onTap: () {
-                      if (activeIndex != index) {
-                        setState(() {
-                          activeIndex = index;
-                        });
-                      }
-                    },
-                    child: AllExpensesItem(
-                      itemModel: item,
-                      isActive: activeIndex == index,
-                    )),
-              ),
-            );
-          } else {
-            return Expanded(
-              child: GestureDetector(
                   onTap: () {
                     if (activeIndex != index) {
                       setState(() {
@@ -69,7 +53,25 @@ class _AllExpensenItemsListViewState extends State<AllExpensenItemsListView> {
                   child: AllExpensesItem(
                     itemModel: item,
                     isActive: activeIndex == index,
-                  )),
+                  ),
+                ),
+              ),
+            );
+          } else {
+            return Expanded(
+              child: GestureDetector(
+                onTap: () {
+                  if (activeIndex != index) {
+                    setState(() {
+                      activeIndex = index;
+                    });
+                  }
+                },
+                child: AllExpensesItem(
+                  itemModel: item,
+                  isActive: activeIndex == index,
+                ),
+              ),
             );
           }
         },

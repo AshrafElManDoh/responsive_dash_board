@@ -11,15 +11,17 @@ class UserInfoListTile extends StatelessWidget {
     return Card(
       color: const Color(0xffFAFAFA),
       elevation: 0,
-      child: ListTile(
-        leading: SvgPicture.asset(userInfo.image),
-        title: Text(
-          userInfo.title,
-          style: AppStyles.styleSemiBold16,
-        ),
-        subtitle: Text(
-          userInfo.subTitle,
-          style: AppStyles.styleRegular12,
+      child: Center(
+        child: ListTile(
+          leading: SvgPicture.asset(userInfo.image),
+          title: Text(
+            userInfo.title,
+            style: AppStyles.styleSemiBold16,
+          ),
+          subtitle: Text(
+            userInfo.subTitle,
+            style: AppStyles.styleRegular12,
+          ),
         ),
       ),
     );
