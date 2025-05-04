@@ -34,48 +34,49 @@ class _AllExpensenItemsListViewState extends State<AllExpensenItemsListView> {
   @override
   Widget build(BuildContext context) {
     return Row(
-      children: list.asMap().entries.map(
-        (e) {
-          int index = e.key;
-          var item = e.value;
-          if (index == 1) {
-            return Expanded(
-              child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 12),
-                child: GestureDetector(
-                  onTap: () {
-                    if (activeIndex != index) {
-                      setState(() {
-                        activeIndex = index;
-                      });
-                    }
-                  },
-                  child: AllExpensesItem(
-                    itemModel: item,
-                    isActive: activeIndex == index,
-                  ),
-                ),
-              ),
-            );
-          } else {
-            return Expanded(
-              child: GestureDetector(
-                onTap: () {
-                  if (activeIndex != index) {
-                    setState(() {
-                      activeIndex = index;
-                    });
-                  }
-                },
-                child: AllExpensesItem(
-                  itemModel: item,
-                  isActive: activeIndex == index,
-                ),
-              ),
-            );
-          }
-        },
-      ).toList(),
+      children: [
+        Expanded(
+          child: GestureDetector(
+            onTap: () {
+              updateIndex(0);
+            },
+            child:
+                AllExpensesItem(itemModel: list[0], isActive: activeIndex == 0),
+          ),
+        ),
+        const SizedBox(
+          width: 12,
+        ),
+        Expanded(
+          child: GestureDetector(
+            onTap: () {
+              updateIndex(1);
+            },
+            child:
+                AllExpensesItem(itemModel: list[0], isActive: activeIndex == 1),
+          ),
+        ),
+        const SizedBox(
+          width: 12,
+        ),
+        Expanded(
+          child: GestureDetector(
+            onTap: () {
+              updateIndex(2);
+            },
+            child:
+                AllExpensesItem(itemModel: list[0], isActive: activeIndex == 2),
+          ),
+        ),
+      ],
     );
+  }
+
+  void updateIndex(int index) {
+    if (activeIndex != index) {
+      setState(() {
+        activeIndex = index;
+      });
+    }
   }
 }
