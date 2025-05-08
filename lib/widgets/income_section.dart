@@ -1,23 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dash_board/widgets/all_expensen_header.dart';
-import 'package:responsive_dash_board/widgets/all_expensen_items_list_view.dart';
 import 'package:responsive_dash_board/widgets/custom_background_widget.dart';
 
-class AllExpenses extends StatelessWidget {
-  const AllExpenses({
-    super.key,
-  });
+class IncomeSection extends StatelessWidget {
+  const IncomeSection({super.key});
 
   @override
   Widget build(BuildContext context) {
     return const CustomBackgroundWidget(
         child: Column(
       children: [
-        AllExpensenHeader(sectionName: "All Expenses",),
-        SizedBox(
-          height: 16,
-        ),
-        AllExpensenItemsListView(),
+        AllExpensenHeader(
+          sectionName: "Income",
+        ),SizedBox(height: 16,),
       ],
     ));
   }

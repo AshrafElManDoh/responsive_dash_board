@@ -2,14 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:responsive_dash_board/utils/app_styles.dart';
 
 class AllExpensenHeader extends StatelessWidget {
-  const AllExpensenHeader({super.key});
+  const AllExpensenHeader({super.key, required this.sectionName});
+
+  final String sectionName;
 
   @override
   Widget build(BuildContext context) {
     return Row(
       children: [
-        const Text(
-          "All Expenses",
+        Text(
+          sectionName,
           style: AppStyles.styleSemiBold20,
         ),
         const Spacer(),
