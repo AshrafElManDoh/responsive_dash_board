@@ -27,13 +27,14 @@ class DashBoardDesktopLayout extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Expanded(
-                      flex: 2,
+                      flex: 604,
                       child: AllExpensesAndQuickInvoiceSection(),
                     ),
                     SizedBox(
                       width: 24,
                     ),
                     Expanded(
+                      flex: 468,
                       child: Padding(
                         padding: EdgeInsets.only(top: 40),
                         child: Column(
