@@ -26,16 +26,16 @@ class AllExpensenHeader extends StatelessWidget {
               ),
             ),
           ),
-          child: const Row(
+          child: Row(
             children: [
               Text(
                 "Monthly",
                 style: AppStyles.styleMedium16,
               ),
-              SizedBox(
+              const SizedBox(
                 width: 18,
               ),
-              Icon(Icons.keyboard_arrow_down_outlined),
+              const Icon(Icons.keyboard_arrow_down_outlined),
             ],
           ),
         )

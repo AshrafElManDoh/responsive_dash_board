@@ -82,7 +82,7 @@ class QuickInvoice extends StatelessWidget {
                       borderRadius: BorderRadius.circular(12),
                     ),
                   ),
-                  child: const Text(
+                  child: Text(
                     "Add more details",
                     style: AppStyles.styleSemiBold18,
                   ),
