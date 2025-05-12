@@ -12,7 +12,7 @@ class AllExpensenHeader extends StatelessWidget {
       children: [
         Text(
           sectionName,
-          style: AppStyles.styleSemiBold20,
+          style: AppStyles.styleSemiBold20(context),
         ),
         const Spacer(),
         Container(
@@ -30,7 +30,7 @@ class AllExpensenHeader extends StatelessWidget {
             children: [
               Text(
                 "Monthly",
-                style: AppStyles.styleMedium16,
+                style: AppStyles.styleMedium16(context),
               ),
               const SizedBox(
                 width: 18,

@@ -84,7 +84,7 @@ class QuickInvoice extends StatelessWidget {
                   ),
                   child: Text(
                     "Add more details",
-                    style: AppStyles.styleSemiBold18,
+                    style: AppStyles.styleSemiBold18(context),
                   ),
                 ),
               ),
@@ -104,7 +104,7 @@ class QuickInvoice extends StatelessWidget {
                   ),
                   child: Text(
                     "Send Money",
-                    style: AppStyles.styleSemiBold18.copyWith(color: kwhite),
+                    style: AppStyles.styleSemiBold18(context).copyWith(color: kwhite),
                   ),
                 ),
               ),
